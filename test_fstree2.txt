@@ -1,0 +1,15 @@
+# Create initial directories
+a main
+a subA main
+a subB main
+a subC main
+
+# Remove subA and subB
+r subA main
+r subB main
+
+# Run garbage collection
+g
+
+# Print final state
+p

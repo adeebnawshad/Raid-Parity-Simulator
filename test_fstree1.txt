@@ -1,0 +1,16 @@
+# Create initial directories
+a root
+a folder1 root
+a folder2 root
+
+# Create a subdirectory in folder1
+a sub1 folder1
+
+# Link folder1 to folder2
+h folder1 root root/folder2
+
+# Garbage collection should NOT remove folder1 since it’s still linked
+g
+
+# Print final tree
+p

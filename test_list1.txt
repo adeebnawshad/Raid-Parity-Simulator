@@ -1,0 +1,14 @@
+# Add elements to the list
+a 50
+a 25
+a 50
+a 75
+
+# Remove one occurrence of 50
+r 50
+
+# Print the list
+p
+
+# Run garbage collection
+g

@@ -1,0 +1,65 @@
+Test Case 1:   
+Transaction File: test_list1.txt  
+Description: This test verifies that the list correctly handles duplicate values and ensures that garbage collection only removes the exact instance that was deleted. It checks whether removing a value does not affect other instances of the same value.
+Expected Output in gc.log:
+Mark_and_sweep running
+Chunks freed this pass: 1
+Chunks still allocated: 3
+
+
+Test Case 2:   
+Description: This test evaluates how the garbage collector responds to frequent additions, deletions, and invocations. The test ensures that memory is cleaned up efficiently after multiple operations.
+Expected Output in gc.log:
+Mark_and_sweep running
+Chunks freed this pass: 0
+Chunks still allocated: 3
+Mark_and_sweep running
+Chunks freed this pass: 0
+Chunks still allocated: 4
+Mark_and_sweep running
+Chunks freed this pass: 2
+Chunks still allocated: 2
+Mark_and_sweep running
+Chunks freed this pass: 1
+Chunks still allocated: 1
+
+Test Case 3: 
+Transaction File: test_list3.txt  
+Description: This test checks if the garbage collector properly frees memory when all elements are removed. After clearing the list, garbage collection should leave no allocated chunks.
+
+Expected Output in gc.log:
+Mark_and_sweep running
+Chunks freed this pass: 4
+Chunks still allocated: 0
+
+
+Test Case 4: 
+Transaction File: test_fstree1.txt  
+Description: This test ensures that hard links prevent directories from being deleted by garbage collection. Although a directory is linked elsewhere, it should remain intact after garbage collection runs.
+
+Expected Output in gc.log:
+Mark_and_sweep running  
+Mark_and_sweep running
+Chunks freed this pass: 0
+Chunks still allocated: 4
+
+
+Test Case 5:   
+Description: This test verifies that deleting subdirectories properly marks them for garbage collection while leaving the remaining structure untouched.
+Expected output in gc.log:
+Mark_and_sweep running
+Chunks freed this pass: 2
+Chunks still allocated: 2
+
+
+Test Case 6: 
+Transaction File: test_fstree3.txt  
+Description: This test evaluates whether garbage collection correctly removes unreachable directories while keeping new additions intact.
+
+Expected Output in gc.log:
+Mark_and_sweep running
+Chunks freed this pass: 2
+Chunks still allocated: 2
+Mark_and_sweep running
+Chunks freed this pass: 0
+Chunks still allocated: 3

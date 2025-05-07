@@ -1,0 +1,21 @@
+# Add elements
+a 5
+a 10
+a 15
+g
+a 20
+p
+g
+
+# Remove some elements
+r 10
+r 5
+g
+p
+
+# Add and remove more elements
+a 30
+g
+r 15
+g
+p

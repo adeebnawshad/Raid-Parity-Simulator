@@ -1,0 +1,20 @@
+# Add values
+a 100
+a 200
+a 300
+a 400
+
+# Print list
+p
+
+# Remove all values
+r 100
+r 200
+r 300
+r 400
+
+# Print empty list
+p
+
+# Run garbage collection
+g

@@ -1,0 +1,21 @@
+# Create directories
+a projects
+a school projects
+a work projects
+a fun projects
+
+# Remove school and work directories
+r school projects
+r work projects
+
+# Run garbage collection
+g
+
+# Print final tree
+p
+
+# Add another directory
+a newDir fun
+
+# Run garbage collection again
+g
